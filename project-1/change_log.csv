@@ -1,0 +1,2 @@
+Change_ID,Column,Issue,Action,Impact,Status
+CR001,Date,Date values were stored as object/text,Converted Date column to datetime format,Dates can now be reliably analyzed and validated,Resolved
