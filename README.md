@@ -3,6 +3,114 @@
 The README reflects the internship's stated emphasis on data integrity, including missing values, duplicates, formatting, and validation of duplicate IDs/date formats. :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2}
 
 ---
+# Project 1 - Data Cleaning & Preparation
+
+## 📌 Overview
+
+This project is part of the Data Analytics Industrial Training program at
+DecodeLabs.
+
+The objective of Project 1 is to clean and prepare a raw e-commerce dataset
+so that it can be used as a reliable source for further analysis.
+
+Data cleaning is an important first step in data analytics because accurate
+analysis depends on accurate and consistent data.
+
+## 🎯 Objective
+
+The main goal of this project is to identify and handle:
+
+- Missing or null values
+- Duplicate records
+- Incorrect data
+- Incorrect date formats
+- Incorrect numerical data types
+- Inconsistent text data
+- Invalid numerical values
+
+The project follows the Data Cleaning & Preparation requirements provided
+for the internship.
+
+## 📊 Dataset
+
+The dataset contains e-commerce order information.
+
+### Dataset Size
+
+- Total Records: 1,200
+- Total Columns: 14
+
+### Columns
+
+| Column | Description |
+|---|---|
+| OrderID | Unique order identifier |
+| Date | Order date |
+| CustomerID | Customer identifier |
+| Product | Product ordered |
+| Quantity | Number of units ordered |
+| UnitPrice | Price per unit |
+| ShippingAddress | Customer shipping address |
+| PaymentMethod | Payment method used |
+| OrderStatus | Current status of the order |
+| TrackingNumber | Shipment tracking number |
+| ItemsInCart | Number of items in cart |
+| CouponCode | Coupon applied to the order |
+| ReferralSource | Source through which customer arrived |
+| TotalPrice | Total order value |
+
+## 🛠️ Tools Used
+
+- Python
+- Pandas
+- NumPy
+- Jupyter Notebook
+- Excel/CSV
+
+## 🧹 Data Cleaning Process
+
+### 1. Load Dataset
+
+The raw dataset was loaded using Pandas.
+
+### 2. Dataset Inspection
+
+The dataset was inspected using:
+
+- `head()`
+- `tail()`
+- `info()`
+- `shape`
+- `dtypes`
+
+### 3. Missing Value Analysis
+
+Missing values were checked for every column.
+
+The final cleaned dataset contains no missing values in the analyzed
+columns.
+
+### 4. Duplicate Analysis
+
+Duplicate records and duplicate identifiers were checked.
+
+The dataset contains:
+
+- 1,200 unique OrderIDs
+- 1,200 unique TrackingNumbers
+- 1,189 unique CustomerIDs
+
+This confirms that each order has a unique OrderID and TrackingNumber.
+
+### 5. Date Formatting
+
+The `Date` column was converted into a proper datetime format.
+
+Example:
+
+```python
+df["Date"] = pd.to_datetime(df["Date"])
+---
 
 # Project 2 — `README.md`
 
